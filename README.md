@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 🚀 Current MVP (Hackathon Scope)
 
-## Getting Started
+This submission implements a **minimal but complete end-to-end system**.
 
-First, run the development server:
 
-```bash
+
+## How to run
+
+First run the front end 
+```
+npm i
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+And run the backend in new terminal
+```
+cd absent-verifier
+npm i
+node index.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### MVP Features
+- One forbidden smart contract
+- One fixed time window (slot range)
+- One claim per wallet
+- On-chain replay protection
+- Deterministic credential minting
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### What’s On-Chain
+- Config PDA (verifier, forbidden program, slot window)
+- Claim uniqueness enforcement via PDAs
+- Credential minting logic
+- Verifier authority enforcement
 
-## Learn More
+### What’s Off-Chain
+- Transaction history scanning
+- Absence verification logic
+- Attestation generation
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔐 Security Model
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Verifier public key is stored **on-chain**
+- Only the configured verifier can authorize claims
+- Users always sign their own transactions
+- Claims are one-time and replay-protected
+- Invalid proofs fail deterministically
 
-## Deploy on Vercel
+The verifier **cannot bypass** the on-chain program.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+## 🔮 Future Roadmap
+
+Absent is designed so the **on-chain program does not need to change** as the system evolves.
+
+### Planned Extensions
+- Multiple verifiers (M-of-N threshold attestations)
+- Community-run oracle verifier networks
+- DAO-governed verifier registry
+- Context-specific absence proofs
+
+### Zero-Knowledge Phase
+- ZK non-membership proofs
+- Privacy-preserving absence credentials
+- Local proof generation by users
+- On-chain ZK verification
+
+---
+
+## 🧪 Tech Stack
+
+- **Solana** (Anchor framework)
+- **Node.js** verifier service
+- **Next.js** frontend
+- **Phantom Wallet**
+- **Devnet** deployment
+
+---
+
+## 🏁 Status
+
+✅ Working MVP  
+🚧 Hackathon prototype  
+🔬 Designed for extensibility  
+
+---
+
+## 📣 Hackathon Submission
+
+This project is submitted to the **Solana Student Hackathon**.
+
+Built with a focus on:
+- correctness
+- architectural clarity
+- honest constraints
+- future extensibility
+
+---
+
+## 🧠 One-Liner
+
+> **Absence is harder to prove than presence.  
+> Absent makes it possible.**
