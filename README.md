@@ -159,8 +159,6 @@ This MVP demonstrates the architecture, trust boundaries, replay protection, awa
 ## 🧠 One-Liner
 
 > **Absent makes “not doing something” provable — privately, cryptographically, and composably on Solana.**
-```
-
 
 # HOW TO RUN
 ### FRONTEND
