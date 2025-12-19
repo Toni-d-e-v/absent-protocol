@@ -1,7 +1,7 @@
 ## 🚀 Current MVP (Hackathon Scope)
 
 This submission implements a **minimal but complete end-to-end system**.
-(Pitch video)[https://www.youtube.com/watch?v=XWw1e9-qPD8]
+[Pitch video](https://www.youtube.com/watch?v=XWw1e9-qPD8)
 
 
 ## How to run
