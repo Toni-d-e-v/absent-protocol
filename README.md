@@ -1,4 +1,4 @@
-```markdown
+
 # **Absent — Cryptographic Proof of Not Doing Something (Contextual Absence on Solana)**
 
 🌐 **Live App:** https://absent-protocol.vercel.app  
